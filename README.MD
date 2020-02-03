@@ -10,12 +10,6 @@ Include the script in your HTML and create the ScrollProgressBar:
 new ScrollProgressBar();
 ```
 
-To activate the ScrollProgressBar, simply use the .start() function:
-
-```js
-new ScrollProgressBar().start();
-```
-
 ## Options
 
 The ScrollProgressBar can take in an object with options as a parameter. You can freely choose what options you want to use.
@@ -31,14 +25,6 @@ Include the script in your HTML and create the ScrollProgressBar:
 ```js
 
 new ScrollProgressBar();
-```
-
-To activate the ScrollProgressBar, simply use the .start() function:
-
-
-```js
-
-new ScrollProgressBar().start()
 ```
 
 ## Options
@@ -66,27 +52,4 @@ new ScrollProgressBar({color: 'lightblue', size: '4rem', opacity: 0.5}).start()
 ```js
 
 new ScrollProgressBar({color: '#ccc', size: '6px', placement: 'left', zIndex: 10}).start()
-```
-
-## Examples
-
-### 1:
-
-```js
-new ScrollProgressBar({
-  color: "lightblue",
-  size: "4rem",
-  opacity: 0.5
-}).start();
-```
-
-### 2:
-
-```js
-new ScrollProgressBar({
-  color: "#ccc",
-  size: "6px",
-  placement: "left",
-  zIndex: 10
-}).start();
 ```
