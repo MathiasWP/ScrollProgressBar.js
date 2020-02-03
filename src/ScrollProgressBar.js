@@ -259,10 +259,10 @@
             // UPDATING PERCENTAGE
             _percentage = _scrolled / _docHeight;
 
-            if (this_.options.placement === "top" || vthis_.options.placement === "bottom") {
+            if (this_.options.placement === "top" || this_.options.placement === "bottom") {
               _scrolledBar.style.transform = "scaleX(" + _percentage + ")";
             }
-            else if (this_.options.placement === "left" || vthis_.options.placement === "right") {
+            else if (this_.options.placement === "left" || this_.options.placement === "right") {
               _scrolledBar.style.transform = "scaleY(" + _percentage + ")";
             }
           }, 66);
@@ -287,7 +287,7 @@
           if (this_.options.placement === "top" || this_.options.placement === "bottom") {
             _scrolledBar.style.transform = "scaleX(" + _percentage + ")";
           }
-          else if (vthis_.options.placement === "left" || this_.options.placement === "right") {
+          else if (this_.options.placement === "left" || this_.options.placement === "right") {
             _scrolledBar.style.transform = "scaleY(" + _percentage + ")";
           }
         });
