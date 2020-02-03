@@ -7,24 +7,15 @@ A super lightweight and robust library for displaying how far a user has scrolle
 Include the script in your HTML and create the ScrollProgressBar:
 
 ```js
+
 new ScrollProgressBar();
 ```
 
-## Options
-
-The ScrollProgressBar can take in an object with options as a parameter. You can freely choose what options you want to use.
-# ScrollProgressBar.js
-
-A super lightweight and robust library for displaying how far a user has scrolled on a webpage - only 3kb!
-
-
-# Core
-
-Include the script in your HTML and create the ScrollProgressBar:
+To activate the ScrollProgressBar, simply use the .start() function:
 
 ```js
 
-new ScrollProgressBar();
+new ScrollProgressBar().start()
 ```
 
 ## Options
