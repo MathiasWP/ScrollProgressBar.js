@@ -282,6 +282,15 @@
 
           _scrolled = window.pageYOffset || (_html || document.body.parentNode || document.body).scrollTop;
 
+          _docHeight =
+            Math.max(
+              _body.scrollHeight,
+              _body.offsetHeight,
+              _html.clientHeight,
+              _html.scrollHeight,
+              _html.offsetHeight
+            ) - _screenHeight;
+
           _percentage = _scrolled / _docHeight;
 
           if (this_.options.placement === "top" || this_.options.placement === "bottom") {
