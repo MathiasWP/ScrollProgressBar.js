@@ -21,14 +21,14 @@
 
         if (init_options.hasOwnProperty(option) === false) {
 
-          throw new Error('\n "' + option + '" IS NOT A VALID OPTION FOR SCROLLPROGRESSBAR.');
+          throw new Error('\n "' + option + '" is not a valid option for ScrollProgressBar.');
 
         }
 
 
         else if (option === "color" && typeof options[option] !== "string") {
 
-          throw new Error('\n color MUST BE A STRING ("#ffa453", "rgba(255,255,255)", "blue" etc...)');
+          throw new Error('\n color must be a string ("#ffa453", "rgba(255,255,255)", "blue" etc...)');
 
         }
 
@@ -41,35 +41,24 @@
             || parseInt(options[option]) < 0)
         ) {
 
-          throw new Error("\n opacity MUST ONLY BE AN INTEGER OR STRING BETWEEN 0-1");
+          throw new Error("\n opacity must only be an integer or string between 0-1.");
 
         }
 
 
         else if (option === "placement" && ["top", "left", "right", "bottom"].filter(function (pl) { pl === options[option]; }).length === 0) {
 
-          throw new Error("\n placement MUST EITHER BE TOP, LEFT, RIGHT OR BOTTOM");
+          throw new Error("\n placement must either be top, left, right or bottom.");
 
         }
 
 
         else if (option === "size" && typeof options[option] !== "string") {
 
-          throw new Error('\n size MUST BE A STRING ("12px", "5rem", "8em" etc...)');
+          throw new Error('\n size must be a string ("12px", "5rem", "8em" etc...)');
 
         }
-
-
-        else if (
-          option === "zIndex" &&
-          (parseInt(options[option]).length !== options[option].length
-            || typeof (options[option] !== ("string" || "number")))
-        ) {
-
-          throw new Error("\n zIndex MUST ONLY BE AN INTEGER OR STRING");
-
-        }
-
+        
 
         else if (option !== init_options.option) {
 
