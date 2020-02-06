@@ -34,9 +34,7 @@
 
 
         else if (
-          option === "opacity" &&
-          (parseInt(options[option]).length !== options[option].length
-            || typeof (options[option] !== ("string" || "number"))
+          option === "opacity" && (typeof (options[option] !== ("string" || "number"))
             || 1 < parseInt(options[option])
             || parseInt(options[option]) < 0)
         ) {
@@ -58,9 +56,20 @@
           throw new Error('\n size must be a string ("12px", "5rem", "8em" etc...)');
 
         }
-        
 
-        else if (option !== init_options.option) {
+
+        else if (
+          option === "zIndex" &&
+          (parseInt(options[option]).length !== options[option].length
+            || typeof (options[option] !== ("string" || "number")))
+        ) {
+
+          throw new Error("\n zIndex must only be an integer or string");
+
+        }
+
+
+        else if (option !== init_options[option]) {
 
           init_options[option] = options[option];
 
@@ -296,7 +305,7 @@
   }
 
   // DEFINING SCROLLPROGRESSBAR
-  if (typeof ScrollProgressBar === "undefined" || typeof ScrollProgressBar === undefined || typeof ScrollProgressBar === null) {
+  if (typeof ScrollProgressBar === "undefined") {
 
     window.ScrollProgressBar = defineScrollProgressBar();
 
