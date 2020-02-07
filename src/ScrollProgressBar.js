@@ -34,9 +34,9 @@
 
 
         else if (
-          option === "opacity" && (typeof (options[option] !== ("string" || "number"))
-            || 1 < parseInt(options[option])
-            || parseInt(options[option]) < 0)
+          option === "opacity" 
+          && (typeof options[option] === "string" || typeof options[option] === "number")
+          && (1 < parseInt(options[option]) || parseInt(options[option]) < 0)
         ) {
 
           throw new Error("\n opacity must only be an integer or string between 0-1.");
@@ -44,7 +44,7 @@
         }
 
 
-        else if (option === "placement" && ["top", "left", "right", "bottom"].filter(function (pl) { pl === options[option]; }).length === 0) {
+        else if (option === "placement" && ["top", "left", "right", "bottom"].find(function (el) { return el === options[option]}) === undefined) {
 
           throw new Error("\n placement must either be top, left, right or bottom.");
 
@@ -59,12 +59,12 @@
 
 
         else if (
-          option === "zIndex" &&
-          (parseInt(options[option]).length !== options[option].length
-            || typeof (options[option] !== ("string" || "number")))
+          option === "zIndex" 
+          && ((typeof options[option] !== ("string") && typeof options[option] !== ("number")) 
+          || parseInt(options[option]).toString().length !== options[option].toString().length)
         ) {
 
-          throw new Error("\n zIndex must only be an integer or string");
+          throw new Error("\n zIndex must only be an integer or string with a numeric value.");
 
         }
 
